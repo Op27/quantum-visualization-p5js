@@ -7,10 +7,10 @@ class Particle {
   constructor() {
     this.position = createVector(random(width), random(height));
     this.velocity = p5.Vector.random2D();
-    this.size = 5 * 1.3 * 0.9; // Updated size, 0.9 times smaller
+    this.size = 5 * 1.3 * 0.9; 
     this.speed = 2;
     this.isArranged = false;
-    this.color = color(255); // Default white
+    this.color = color(255); 
   }
 
   move() {
@@ -75,13 +75,13 @@ function mousePressed() {
 function arrangeParticles(shape) {
   switch (shape) {
     case 'circle':
-      arrangeInCircle(target, 100); // Earth representation
+      arrangeInCircle(target, 100); 
       break;
     case 'square':
-      arrangeInSquare(target, 100); // Moon representation
+      arrangeInSquare(target, 100); 
       break;
     case 'human':
-      arrangeInHumanShape(target, 50); // Universe representation
+      arrangeInHumanShape(target, 50); 
       break;
   }
 }
@@ -145,7 +145,6 @@ function arrangeInHumanShape(center, size) {
 }
 
 function universeColor() {
-  // Returns a color representing the Universe
   return color(random(255), random(255), random(255)); // Random bright color
 }
 
@@ -153,5 +152,3 @@ function commonColor() {
   // Returns a light blue color that is common across all shapes
   return color(173, 216, 230); // Light Blue
 }
-
-// Additional functions or class definitions (if needed)
